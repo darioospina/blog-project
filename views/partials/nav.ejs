@@ -1,12 +1,25 @@
-<nav>
-    <div class="site-title">
-        <a href="/"><h1>Dario's blog</h1></a>
-        <p>This is my new blog</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/"><img src="/logo_dol_2.png" style="width:50px"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="/">Blogs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/blogs/create">New blog</a>
+          </li>
+        </ul>
+        <form class="d-flex" action="/blogs/search" method="POST">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="valueToFind" name="valueToFind">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
     </div>
-
-<ul>
-    <li><a href="/">Blogs</a></li>
-    <li><a href="/about">About</a></li>
-    <li><a href="/blogs/create">New blog</a></li>
-</ul>
-</nav>
+  </nav>

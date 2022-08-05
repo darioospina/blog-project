@@ -12,4 +12,10 @@ router.get('/:id', blogController.blog_details);
 
 router.delete('/:id', blogController.blog_delete)
 
+router.get('/edit/:id', blogController.blog_edit_get)
+
+router.post('/edit/:id', blogController.blog_edit_post)
+
+router.post('/search', blogController.blog_find_get)
+
 module.exports = router;

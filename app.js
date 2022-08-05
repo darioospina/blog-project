@@ -4,10 +4,12 @@ const mongoose = require('mongoose');
 const { render } = require('ejs');
 const blogRoutes = require('./routes/blogRoutes');
 
+const Blog = require('./models/blog');
+
 // express app
 const app = express();
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 // connect to mongodb
 const dbURI = 'mongodb://darioospina:Canada0822@cluster0-shard-00-00.nphiy.mongodb.net:27017,cluster0-shard-00-01.nphiy.mongodb.net:27017,cluster0-shard-00-02.nphiy.mongodb.net:27017/dario-blog?ssl=true&replicaSet=atlas-n2rwvb-shard-0&authSource=admin&retryWrites=true&w=majority'

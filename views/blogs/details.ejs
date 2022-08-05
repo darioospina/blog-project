@@ -9,8 +9,12 @@
         <h2><%= blog.title %></h2>
         <div class="content">
             <p><%= blog.body %></p>
+            <BR>
+            <p style="font-size:small">Created at: <%= blog.createdAt %></p>
+            <p style="font-size:small">Updated at: <%= blog.updatedAt %></p>
         </div>
         <a class="delete" data-doc="<%= blog._id %>"><img src="/borrar.png" alt="delete" width="25px"></a>
+        <a class="edit" href="/blogs/edit/<%= blog._id %>"><img src="/lapiz.png" alt="delete" width="25px"></a>
     </div>
     
 <%- include('../partials/footer.ejs') %>
@@ -20,7 +24,7 @@
 
     trashcan.addEventListener("click", (e) => {
         const endpoint = `/blogs/${trashcan.dataset.doc}`;
-        
+
         fetch(endpoint, {
             method: "DELETE"
         })
