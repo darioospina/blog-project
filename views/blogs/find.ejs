@@ -7,7 +7,7 @@
     <%- include('../partials/nav.ejs') %>
     
     <div class="blogs content">
-        <h2>Blogs matching the criteria</h2>
+        <div class="special-title"><h2>Blogs matching the criteria</h2></div>
 
         <% if (blogs.length > 0) { %>
             <% blogs.forEach(blog => { %>
@@ -17,7 +17,7 @@
                 </a>
             <% }) %>
         <% } else { %>
-            <p>There are no blogs to display...</p>
+            <p>There are no blogs matching the criteria you entered...</p>
         <% } %>
 
     </div>

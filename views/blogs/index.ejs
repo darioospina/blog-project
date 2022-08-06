@@ -7,7 +7,7 @@
     <%- include('../partials/nav.ejs') %>
     
     <div class="blogs content">
-        <h2>All Blogs</h2>
+        <div class="special-title"><h2>All Blogs</h2></div>
 
         <% if (blogs.length > 0) { %>
             <% blogs.forEach(blog => { %>
@@ -22,6 +22,9 @@
 
     </div>
 
+    <style>
+
+    </style>
     
 <%- include('../partials/footer.ejs') %>
 </body>
